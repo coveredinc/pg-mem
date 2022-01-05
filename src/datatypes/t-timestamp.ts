@@ -35,8 +35,7 @@ export class TimestampType extends TypeBase<Date> {
       case DataType.date:
         return value.setConversion(
           (raw) => {
-            console.log("raw: ", raw);
-            return moment.utc(raw).toDate();
+            return moment(raw).toDate();
           },
           (toDate) => ({ toDate })
         );
@@ -75,8 +74,7 @@ export class TimestampType extends TypeBase<Date> {
           case DataType.date:
             return value.setConversion(
               (str) => {
-                const conv = moment.utc(str);
-                console.log("raw:", conv);
+                const conv = moment(str);
                 if (!conv.isValid()) {
                   throw new QueryError(`Invalid timestamp format: ` + str);
                 }

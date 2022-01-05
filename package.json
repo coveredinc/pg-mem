@@ -1,6 +1,6 @@
 {
-  "name": "pg-mem",
-  "version": "2.1.9",
+  "name": "@klahdenk/pg-mem",
+  "version": "2.1.12",
   "description": "A memory version of postgres",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,7 @@
     "cover": "cross-env NODE_ENV=coverage nyc --reporter=lcov --reporter=text npm run test"
   },
   "author": "Olivier Guimbal",
-  "repository": "https://github.com/oguimbal/pg-mem",
+  "repository": "https://github.com/klahdenk/pg-mem",
   "issues": "https://github.com/oguimbal/pg-mem/issues",
   "keywords": [
     "postgres",
@@ -37,6 +37,9 @@
     "pgsql",
     "postgresql"
   ],
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "license": "MIT",
   "dependencies": {
     "@mikro-orm/core": "^4.5.3",

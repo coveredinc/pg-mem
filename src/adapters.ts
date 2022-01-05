@@ -55,7 +55,7 @@ function toLiteral(val: any): string {
         return `ARRAY[${val.map((x) => toLiteral(x)).join(", ")}]`;
       }
       if (val instanceof Date) {
-        return `'${moment.utc(val).toISOString()}'`;
+        return `'${moment(val).toISOString()}'`;
       }
       if (isBuf(val)) {
         return literal(bufToString(val));
