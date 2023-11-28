@@ -43,7 +43,7 @@
   "license": "MIT",
   "dependencies": {
     "@mikro-orm/core": "^4.5.3",
-    "@mikro-orm/postgresql": "^4.5.3",
+    "@mikro-orm/postgresql": "^5.0.0",
     "functional-red-black-tree": "^1.0.1",
     "immutable": "^4.0.0-rc.12",
     "lru-cache": "^6.0.0",
